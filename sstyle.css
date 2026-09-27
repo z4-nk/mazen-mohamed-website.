@@ -279,6 +279,21 @@ body {
   }
 
   .section { padding-top: 90px; }
+
+  .footer__content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer__contact {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .footer__link {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 @media (max-width: 480px) {
@@ -423,6 +438,89 @@ body {
 
 @media (prefers-reduced-motion: reduce) {
   .reveal-child { opacity: 1; transform: none; filter: none; transition: none; }
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.footer {
+  position: relative;
+  z-index: 1;
+  padding: 24px 0 60px;
+}
+
+.footer__content {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding: 28px 24px;
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  background: rgba(255,255,255,0.025);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.footer__top {
+  text-align: center;
+}
+
+.footer__title {
+  font-size: clamp(1.2rem, 2vw, 1.8rem);
+  color: var(--text);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.footer__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer__brand {
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+.footer__contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.footer__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 20px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: rgba(255,255,255,0.03);
+  color: var(--text);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: transform 0.25s var(--ease), border-color 0.25s var(--ease), color 0.25s var(--ease), box-shadow 0.25s var(--ease);
+}
+
+.footer__link:hover {
+  transform: translateY(-2px);
+  border-color: rgba(34,211,238,0.35);
+  box-shadow: 0 0 24px rgba(34,211,238,0.12);
+  color: var(--cyan);
+}
+
+.footer__link svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+  flex-shrink: 0;
 }
 
 /* ============================================
