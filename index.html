@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mazen Mohamed — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="sstyle.css" />
+</head>
+<body>
+
+  <div class="scroll-progress" id="scrollProgress"></div>
+  <div class="cursor-glow" id="cursorGlow"></div>
+  <div class="bg-layer" aria-hidden="true">
+    <div class="bg-grid"></div>
+    <div class="bg-orb bg-orb--1"></div>
+    <div class="bg-orb bg-orb--2"></div>
+    <div class="bg-orb bg-orb--3"></div>
+    <canvas class="bg-particles" id="particleCanvas"></canvas>
+  </div>
+
+  <header class="navbar" id="navbar">
+    <nav class="navbar__pill">
+      <a href="#home"     class="nav-link active" data-section="home">Home</a>
+      <a href="#about"    class="nav-link"         data-section="about">About</a>
+      <a href="#servers"  class="nav-link"         data-section="servers">Servers</a>
+      <a href="#projects" class="nav-link"         data-section="projects">Projects</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <button class="mobile-menu__close" id="mobileClose">✕</button>
+    <nav class="mobile-menu__nav">
+      <a href="#home"     class="mobile-link">Home</a>
+      <a href="#about"    class="mobile-link">About</a>
+      <a href="#servers"  class="mobile-link">Servers</a>
+      <a href="#projects" class="mobile-link">Projects</a>
+    </nav>
+  </div>
+
+  <main>
+
+    <!-- HOME -->
+    <section id="home" class="section section--home">
+      <div class="hero">
+        <p class="hero__label reveal-child" data-delay="0">
+        </p>
+        <h1 class="hero__title reveal-child" data-delay="1">
+          Mazen<br />
+          <span class="gradient-text" id="scrambleTarget">Mohamed</span>
+        </h1>
+        <p class="hero__subtitle reveal-child" data-delay="2">
+          I build fast, modern, and beautiful digital experiences using HTML, CSS &amp; JavaScript.
+        </p>
+        <div class="hero__buttons reveal-child" data-delay="3">
+          <a href="#projects" class="btn btn--primary">View Projects</a>
+          <a href="#servers"  class="btn btn--ghost">My Services</a>
+        </div>
+        <!-- <div class="hero__scroll reveal-child" data-delay="4">
+          <span class="scroll-dot"></span> -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section section--about observe-section">
+      <div class="container">
+        <h2 class="section-title reveal-child">About <span class="gradient-text">Me</span></h2>
+        <div class="about__grid">
+          <div class="about__avatar-wrap reveal-child">
+            <div class="avatar-ring">
+              <div class="avatar-inner">
+                <img src="profile-img.jpg" alt="Mazen Mohamed" class="avatar-img" onerror="this.style.display='none'" />
+              </div>
+            </div>
+          </div>
+          <div class="about__content">
+            <p class="about__bio reveal-child" data-delay="1">
+              Hi, I'm Mazen Mohamed — a passionate Frontend Developer who enjoys turning ideas into modern, responsive and user-friendly websites.
+            </p>
+            <p class="about__bio reveal-child" data-delay="2">
+              I focus on clean code, great design, and smooth user experiences.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVERS -->
+    <section id="servers" class="section section--servers observe-section">
+      <div class="container">
+        <h2 class="section-title reveal-child">What I <span class="gradient-text">Offer</span></h2>
+        <div class="servers__layout">
+
+          <div class="terminal-card reveal-child">
+            <div class="terminal-bar">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+            </div>
+            <div class="terminal-body mono">
+              <p><span class="t-green"></span>services.txt</p>
+              <p class="t-cyan">▶ Custom Website Development</p>
+              <p class="t-muted">&nbsp;&nbsp;Building modern, responsive websites for businesses</p>
+              <p class="t-cyan">▶ Website Maintenance</p>
+              <p class="t-muted">&nbsp;&nbsp;Updates, fixes, and improvements</p>
+            </div>
+          </div>
+
+          <div class="lang-row lang-row--vertical reveal-child" data-delay="2">
+            <div class="lang-item">
+              <svg viewBox="0 0 128 128">
+                <path fill="#E44D26" d="M19.037 113.876L9.032 1.661h109.936l-10.016 112.198-45.019 12.48z"/>
+                <path fill="#F16529" d="M64 116.8l36.378-10.086 8.559-95.878H64z"/>
+                <path fill="#EBEBEB" d="M64 52.455H45.788L44.53 38.361H64V24.599H29.489l.33 3.692 3.382 37.927H64zm0 35.743l-.061.017-15.327-4.14-.979-10.975H33.816l1.928 21.609 28.193 7.826.063-.017z"/>
+                <path fill="#fff" d="M63.952 52.455v13.763h16.947l-1.597 17.849-15.35 4.143v14.319l28.215-7.82.207-2.325 3.234-36.233.335-3.696h-3.708zm0-27.856v13.762h33.244l.276-3.092.628-6.978.329-3.692z"/>
+              </svg>
+              <span>HTML5</span>
+            </div>
+            <div class="lang-item">
+              <svg viewBox="0 0 128 128">
+                <path fill="#1572B6" d="M18.814 114.123L8.76 1.352h110.48l-10.064 112.754-45.243 12.543-45.119-12.526z"/>
+                <path fill="#33A9DC" d="M64.001 117.062l36.559-10.136 8.601-96.354h-45.16v106.49z"/>
+                <path fill="#fff" d="M64.001 51.429h18.302l1.264-14.163H64.001V23.435h34.682l-.332 3.711-3.4 38.114h-30.95V51.429z"/>
+                <path fill="#EBEBEB" d="M64.083 87.349l-.061.018-15.404-4.159-.985-11.031H33.752l1.937 21.717 28.331 7.863.063-.018V87.349z"/>
+                <path fill="#fff" d="M81.127 64.675l-1.666 18.522-15.426 4.164v14.41l28.354-7.853.208-2.337 2.406-26.906H81.127z"/>
+                <path fill="#EBEBEB" d="M64.048 23.435v13.831H30.64l-.277-3.108-.63-7.012-.331-3.711h34.646zm-.047 27.994H33.586l.277 3.108.631 7.012.33 3.711h29.177V51.429z"/>
+              </svg>
+              <span>CSS3</span>
+            </div>
+            <div class="lang-item">
+              <svg viewBox="0 0 128 128">
+                <path fill="#F0DB4F" d="M1.408 1.408h125.184v125.185H1.408z"/>
+                <path fill="#323330" d="M116.347 96.736c-.917-5.711-4.641-10.508-15.672-14.981-3.832-1.761-8.104-3.022-9.377-5.926-.452-1.69-.512-2.642-.226-3.665.821-3.32 4.784-4.355 7.925-3.403 2.023.678 3.938 2.237 5.093 4.724 5.402-3.498 5.391-3.475 9.163-5.879-1.381-2.141-2.118-3.129-3.022-4.045-3.249-3.629-7.676-5.498-14.756-5.355l-3.688.477c-3.534.893-6.902 2.748-8.877 5.235-5.926 6.724-4.236 18.492 2.975 23.335 7.104 5.332 17.54 6.545 18.873 11.531 1.297 6.104-4.486 8.08-10.234 7.378-4.236-.881-6.592-3.034-9.139-6.949-4.688 2.713-4.688 2.713-9.508 5.485 1.143 2.499 2.344 3.63 4.26 5.795 9.068 9.198 31.76 8.746 35.83-5.176.165-.478 1.261-3.666.38-8.581zM69.462 58.943H57.753l-.048 30.272c0 6.438.333 12.34-.714 14.149-1.713 3.558-6.152 3.117-8.175 2.427-2.059-1.012-3.106-2.451-4.319-4.485-.333-.584-.583-1.036-.667-1.071l-9.52 5.83c1.583 3.249 3.915 6.069 6.902 7.901 4.462 2.678 10.459 3.499 16.731 2.059 4.082-1.189 7.604-3.652 9.448-7.401 2.666-4.915 2.094-10.864 2.07-17.444.06-10.735.001-21.468.001-32.237z"/>
+              </svg>
+              <span>JavaScript</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section section--projects observe-section">
+      <div class="container">
+        <h2 class="section-title reveal-child">Featured <span class="gradient-text">Projects</span></h2>
+        <div class="projects__grid">
+
+          <article class="project-card glass-card tilt-card reveal-child" data-delay="1">
+            <a href="https://z4-nk.github.io/Aya-crochet/" class="project-card__link" target="_blank" rel="noreferrer">
+              <div class="project-card__image">
+                <img src="‏‏لقطة الشاشة (97).png" alt="Aya Crochet preview" />
+                <div class="project-card__overlay mono">Project 01</div>
+              </div>
+            </a>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Aya Crochet</h3>
+              <p class="project-card__desc">A modern handmade crochet brand website with a clean storefront feel, product presentation, and a polished responsive layout.</p>
+              <div class="project-card__tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+              </div>
+              <div class="project-card__links">
+                <a href="https://z4-nk.github.io/Aya-crochet/" class="btn btn--primary btn--sm" target="_blank" rel="noreferrer">Click Here</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card glass-card tilt-card reveal-child" data-delay="2">
+            <a href="https://z4-nk.github.io/watch-store-test/" class="project-card__link" target="_blank" rel="noreferrer">
+              <div class="project-card__image">
+                <img src="home-img.png" alt="Watch Store Test preview" />
+                <div class="project-card__overlay mono">Project 02</div>
+              </div>
+            </a>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Watch Store Test</h3>
+              <p class="project-card__desc">This is a trial/demo project for a modern watch store landing page, focused on product presentation, elegant design, and a clean shopping experience concept.</p>
+              <div class="project-card__tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+              </div>
+              <div class="project-card__links">
+                <a href="https://z4-nk.github.io/watch-store-test/" class="btn btn--primary btn--sm" target="_blank" rel="noreferrer">Click Here</a>
+              </div>
+            </div>
+          </article>
+
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="mono">Mazen Mohamed · <span class="gradient-text">2026</span></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
