@@ -225,26 +225,33 @@ body {
     top: 14px;
     left: 50%;
     transform: translateX(-50%);
-    width: calc(100% - 20px);
+    width: calc(100% - 18px);
     z-index: 1200;
   }
 
   .navbar__pill {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 8px 10px;
+    gap: 2px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .navbar__pill::-webkit-scrollbar {
     display: none;
   }
 
+  .nav-link {
+    font-size: 0.7rem;
+    padding: 8px 10px;
+    white-space: nowrap;
+  }
+
   .hamburger {
-    display: flex;
-    margin-left: auto;
-    background: rgba(10,14,20,0.7);
-    border: 1px solid var(--border);
-    border-radius: 50%;
-    width: 44px;
-    height: 44px;
-    align-items: center;
-    justify-content: center;
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    display: none;
   }
 
   .hero {
