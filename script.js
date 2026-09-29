@@ -79,26 +79,6 @@ function updateNav() {
 window.addEventListener('scroll', updateNav, { passive: true });
 updateNav();
 
-/* ── Mobile hamburger ── */
-const hamburger  = document.getElementById('hamburger');
-const mobileMenu = document.getElementById('mobileMenu');
-const mobileClose = document.getElementById('mobileClose');
-
-function openMenu() {
-  mobileMenu.classList.add('open');
-  mobileMenu.setAttribute('aria-hidden', 'false');
-  hamburger.setAttribute('aria-expanded', 'true');
-}
-function closeMenu() {
-  mobileMenu.classList.remove('open');
-  mobileMenu.setAttribute('aria-hidden', 'true');
-  hamburger.setAttribute('aria-expanded', 'false');
-}
-
-hamburger?.addEventListener('click', openMenu);
-mobileClose?.addEventListener('click', closeMenu);
-document.querySelectorAll('.mobile-link').forEach(l => l.addEventListener('click', closeMenu));
-
 /* ── IntersectionObserver: section reveal ── */
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
@@ -116,7 +96,7 @@ document.querySelectorAll('.observe-section').forEach(sec => observer.observe(se
 
 /* ── Text scramble (hero title accent) ── */
 const scrambleEl = document.getElementById('scrambleTarget');
-if (scrambleEl) {
+if (scrambleEl && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   const original = scrambleEl.textContent;
   const chars    = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$%';
   let   frame    = 0;
